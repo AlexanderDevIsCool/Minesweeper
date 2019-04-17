@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="312.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ua.games.minesweeper.controllers.MainController">
+   <top>
+      <VBox fx:id="topBox" prefHeight="50.0" BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="Game">
+                  <items>
+                        <MenuItem mnemonicParsing="false" onAction="#onClickMenuItemNew" text="New" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <RadioMenuItem mnemonicParsing="false" onAction="#onClickMenuItemBeginner" text="Beginner">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="gameMode" />
+                           </toggleGroup>
+                        </RadioMenuItem>
+                        <RadioMenuItem mnemonicParsing="false" onAction="#onClickMenuItemIntermediate" text="Intermediate" toggleGroup="$gameMode" />
+                        <RadioMenuItem mnemonicParsing="false" onAction="#onClickMenuItemExpert" text="Expert" toggleGroup="$gameMode" />
+                        <RadioMenuItem mnemonicParsing="false" onAction="#onClickMenuItemCustom" text="Custom..." toggleGroup="$gameMode" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#onClickMenuItemBestTimes" text="Best Times..." />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#onClickMenuItemClose" text="Close" />
+                  </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" text="Bot">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#onClickMenuItemBot" text="run" />
+                    </items>
+                  </Menu>
+              </menus>
+            </MenuBar>
+            <HBox prefHeight="18.0" VBox.vgrow="NEVER">
+               <children>
+                  <HBox fx:id="bombsBox" prefHeight="18.0" HBox.hgrow="ALWAYS" />
+                  <HBox fx:id="smileBox" prefHeight="18.0" prefWidth="30.0" HBox.hgrow="NEVER" />
+                  <HBox fx:id="timerBox" prefHeight="18.0" HBox.hgrow="ALWAYS" />
+               </children></HBox>
+         </children>
+      </VBox>
+   </top>
+</BorderPane>

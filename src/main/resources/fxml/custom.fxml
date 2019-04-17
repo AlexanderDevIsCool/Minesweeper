@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="178.0" prefWidth="260.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TextField fx:id="customHeight" layoutX="65.0" layoutY="24.0" prefHeight="26.0" prefWidth="75.0" />
+      <TextField fx:id="customWidth" layoutX="65.0" layoutY="68.0" prefHeight="26.0" prefWidth="75.0" />
+      <TextField fx:id="customMines" layoutX="65.0" layoutY="116.0" prefHeight="26.0" prefWidth="75.0" />
+      <Label layoutX="15.0" layoutY="28.0" prefHeight="18.0" prefWidth="48.0" text="Height:" />
+      <Label layoutX="17.0" layoutY="72.0" prefHeight="18.0" prefWidth="48.0" text="Width:" />
+      <Label layoutX="17.0" layoutY="120.0" prefHeight="18.0" prefWidth="48.0" text="Mines:" />
+      <Button layoutX="158.0" layoutY="24.0" mnemonicParsing="false" onAction="#onClickCustomButtonOK" prefHeight="26.0" prefWidth="66.0" text="OK" />
+      <Button layoutX="158.0" layoutY="116.0" mnemonicParsing="false" onAction="#onClickCustomButtonCancel" prefHeight="26.0" prefWidth="65.0" text="Cancel" />
+   </children>
+</AnchorPane>
